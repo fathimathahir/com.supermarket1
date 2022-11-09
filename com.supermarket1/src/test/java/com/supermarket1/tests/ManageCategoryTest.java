@@ -80,8 +80,7 @@ public class ManageCategoryTest extends Base {
 		managecategorypage.enter_SubCategory("wheat");
 		managecategorypage.click_Save();
 		managecategorypage.click_DeleteButton();
-		  String alert = driver.switchTo().alert().getText();
-			driver.switchTo().alert().accept();
+		 
 		assertTrue(managecategorypage.deleteButton_Enabled());
 		
 		

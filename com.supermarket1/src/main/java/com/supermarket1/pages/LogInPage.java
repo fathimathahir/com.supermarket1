@@ -106,6 +106,5 @@ public class LogInPage {
 		profileImage.click();
 		 logOut.click();
 	}
-
 	
 }

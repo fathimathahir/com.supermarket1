@@ -46,13 +46,17 @@ public class PushNotificationPage {
 	  sendButton.click();
 	  
   }
-  public String getTextSuccessAlert_PushNotification(String title,String description) {
+  public void enter_PushNotificationdata(String title,String description) {
 	  enter_titleField(title);
 	  enter_descriptionField(description);
 	  click_SendButton();
-	  GeneralUtility generalUtility=new GeneralUtility(driver);
-	  return   generalUtility.get_Text(alertSuccessText);
+	  
 	 
+	}
+  public boolean sendButton_Enabled() 
+	{
+		GeneralUtility generalutility = new GeneralUtility(driver);
+		return generalutility.is_Enabled( sendButton);
 	}
 
 }

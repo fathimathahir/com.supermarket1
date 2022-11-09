@@ -48,10 +48,9 @@ public class ManageContentTest extends Base {
 		managecontentPage.clickOn_ManageFooterPage();
 		managecontentPage.clickOn_UpDateLink();
 		managecontentPage.clickOn_UpDateButton();
-		String expectedcolor = Constants.EXPECTED_COLOR_FOR_ALERT_TEXT;
-		String actualcolor = managecontentPage.get_BackGroundColorForSucessUpdateAlert();
-		
-		assertEquals(actualcolor, expectedcolor);
+		String expectedalert = Constants.EXPECTED_ATTRIBUTE_FOR_SUCESSRESETALERT;
+		String actualalert =managecontentPage.get_textForSucessUpdateAlert();
+		assertEquals( actualalert, expectedalert);
 	}
 
 	@Test

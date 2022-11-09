@@ -102,12 +102,12 @@ public class ManageContentPage {
 		UpDateButton.click();
 	}
 
-	public String get_BackGroundColorForSucessUpdateAlert() {
+
+	public String get_textForSucessUpdateAlert() {
 		GeneralUtility generalutility = new GeneralUtility(driver);
-		return generalutility.get_CssValue(UpDatesucessmessage, "background-color");
+		return generalutility.get_Attribute(UpDatesucessmessage, "class");
 
 	}
-
 	public void clickOn_ResetButton() {
 		ResetOption.click();
 	}

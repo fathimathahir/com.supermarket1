@@ -75,7 +75,7 @@ public void initialize(String browser, String url) {
 		initialize(browser,url);
 	}
     
-/*	@AfterMethod(alwaysRun = true)
+@AfterMethod(alwaysRun = true)
 	public void tearDown(ITestResult itestresult)//inbuild testcasename and screenshotname same
 	{
 	
@@ -88,6 +88,7 @@ public void initialize(String browser, String url) {
 		
 		}
 		driver.close();
-*/	
+   
 
+}
 }

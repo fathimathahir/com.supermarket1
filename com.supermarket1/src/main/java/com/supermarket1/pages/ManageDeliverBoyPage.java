@@ -34,8 +34,14 @@ public class ManageDeliverBoyPage {
 	private WebElement saveOption;
 	@FindBy(xpath="//div[@class='alert alert-success alert-dismissible']")
 	private WebElement saveMessage;
-	
-	
+	@FindBy(xpath="//a[@class='btn btn-rounded btn-primary']")
+	private WebElement search;
+	@FindBy(xpath="//a[@class='btn btn-rounded btn-primary']")
+	private WebElement searchField;
+	@FindBy(xpath="//button[@class='btn btn-block-sm btn-danger']")
+	private WebElement searchButton;
+	@FindBy(xpath="//tbody/tr[1]/td[1]")
+	private WebElement searchText;
 	
 	public ManageDeliverBoyPage(WebDriver driver)
 	{
@@ -95,6 +101,28 @@ public class ManageDeliverBoyPage {
 		enter_UserName(username);
 		enter_PassWord(password);
 		}
-	
+	public void click_Search()
+	{
+		search.click();
+	}
+	public void enter_SearchData(String data)
+	{
+		searchField.sendKeys(data);
+	}
+	public void click_SearchButton()
+	{
+		searchButton.click();
+	}
+	public boolean saveButton_Enabled() 
+	{
+		GeneralUtility generalutility = new GeneralUtility(driver);
+		return generalutility.is_Enabled(saveOption);
+	}
+	public String get_SearchText()
+	{
+
+		GeneralUtility generalutility = new GeneralUtility(driver);
+		return generalutility.get_Text(searchText);
+	}
 }
 

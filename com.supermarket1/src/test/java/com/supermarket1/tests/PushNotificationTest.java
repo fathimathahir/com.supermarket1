@@ -1,5 +1,7 @@
 package com.supermarket1.tests;
 
+import static org.testng.Assert.assertTrue;
+
 import java.util.HashMap;
 
 import org.openqa.selenium.WebDriver;
@@ -11,11 +13,11 @@ import com.supermarket1.pages.PushNotificationPage;
 import com.supermarket1.utilities.PdfReader;
 
 public class PushNotificationTest extends Base {
- 
+
 	PushNotificationPage pushnotificationpage;
 	LogInPage loginpage;
 	PdfReader pdfreader;
-	
+
 	@Test
 	public void verify_PushNotification()
 
@@ -26,10 +28,13 @@ public class PushNotificationTest extends Base {
 		loginpage.logIn();
 		pushnotificationpage = new PushNotificationPage(driver);
 		pushnotificationpage.clickOn_PushNotification();
-		pushnotificationpage.getTextSuccessAlert_PushNotification("abc", "defg");
-	    pdfreader = new PdfReader();
-        map = pdfreader.Pdf_ReadData("pushnotificationdata");
-	
+
+		pdfreader = new PdfReader();
+		map = pdfreader.Pdf_ReadData("pushnotificationdata");
+		String notificationtitle = map.get("title 1");
+		String notificationdescription = map.get("description1");
+		pushnotificationpage.enter_PushNotificationdata(notificationtitle, notificationdescription);
+		assertTrue(pushnotificationpage.sendButton_Enabled());
 	}
 
 }

@@ -140,6 +140,8 @@ public class ManageCategoryPage {
 	}
 	public void click_DeleteButton() {
 		delete.click();
+		 String alert = driver.switchTo().alert().getText();
+			driver.switchTo().alert().accept();
 
 	}
 	public boolean deleteButton_Enabled() {

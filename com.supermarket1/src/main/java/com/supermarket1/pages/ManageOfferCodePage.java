@@ -6,6 +6,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import com.supermarket1.utilities.Excel;
+import com.supermarket1.utilities.GeneralUtility;
 import com.supermarket1.utilities.PageUtility;
 
 public class ManageOfferCodePage {
@@ -29,6 +30,15 @@ public class ManageOfferCodePage {
 	private WebElement save ;
 	@FindBy(xpath="//input[@id='main_img']")
 	private WebElement image ;
+	@FindBy(xpath="//div[@class='alert alert-success alert-dismissible']")
+	private WebElement sucessAlert ;
+	@FindBy(xpath="//a[@class='btn btn-rounded btn-primary']")
+	private WebElement searchOption ;
+	@FindBy(xpath="//input[@name='un']")
+	private WebElement searchOfferField ;
+	@FindBy(xpath="//button[@name='Search']")
+	private WebElement searchButton ;
+	
 	
 	public ManageOfferCodePage (WebDriver driver) {
 		this.driver = driver;
@@ -76,5 +86,28 @@ public class ManageOfferCodePage {
 	PageUtility pageutility=new PageUtility(driver);
 	pageutility.scroll_Click(save );
 	}
-	
+	public String get_SucessAlert()
+	{
+
+		GeneralUtility generalutility = new GeneralUtility(driver);
+		return generalutility.get_Attribute(sucessAlert, "class");
+
+	}
+	public void clickOn_SearchOption() {
+
+		searchOption.click();
+	}
+	public void enter_Code(String code) {
+
+		searchOfferField.sendKeys(code);
+	}
+	public void clickOn_SearchButton() {
+
+		searchButton.click();
+	}
+	public boolean searchButton_Enabled() 
+	{
+		GeneralUtility generalutility = new GeneralUtility(driver);
+		return generalutility.is_Enabled(searchButton);
+	}
 }

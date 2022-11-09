@@ -2,7 +2,11 @@ package com.supermarket1.base;
 
 import org.testng.annotations.DataProvider;
 
+import com.supermarket1.utilities.Excel;
+
 public class DataProviderSuperMarket {
+	Excel excel;
+	
 	 /**Manage expense**/
 	@DataProvider (name="searchcategory")
 	 public Object[] [] expenseCategory()
@@ -27,4 +31,20 @@ public class DataProviderSuperMarket {
 			
 		
 	 }
+	 /**Manage offer code**/
+		@DataProvider (name="searchOffers")
+		 public Object[] [] manageOfferCode()
+		 {
+			return new Object [][] {{"500"},{"457"},{"107"},{"102"}};
+				
+			
+		 }
+		 /**AdMIN user page**/
+		@DataProvider (name="searchadminsExcel")
+		 public Object[] [] adminusers()
+		 {
+			excel=new Excel();
+			excel.setExcelFile("adminuser", "searchadmin");	
+			return excel.get_MultiDimensionalObjectArray(3, 1);
+		 }
 }

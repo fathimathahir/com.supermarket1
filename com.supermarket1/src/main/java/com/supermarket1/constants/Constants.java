@@ -12,7 +12,7 @@ public static final String EXPECTED_COLOR_ALERT_TEXT_INVALIDDATA="rgba(220, 53, 
  public static final String IMAGEUPLOAD_MANAGEPAGE=	System.getProperty("user.dir")+"\\src\\main\\resources\\ImageUpLoad";
 
  /**ManageContentPage**/
- public static final String EXPECTED_COLOR_FOR_ALERT_TEXT="rgba(40, 167, 69, 1)";
+ public static final String EXPECTED_ATTRIBUTE_FOR_SUCESSRESETALERT="alert alert-success alert-dismissible";
  public static final String EXPECTED_COLOR_NEW_OPTION="rgba(220, 53, 69, 1)";
  public static final String EXPECTED_COLOR_RESET_OPTION="rgba(248, 249, 250, 1)";
  
@@ -28,6 +28,8 @@ public static final String EXPECTED_COLOR_ALERT_TEXT_INVALIDDATA="rgba(220, 53, 
  
  /**Manage offer page**/
  public static final String IMAGEUPLOAD_MANAGEOFFER_CODE =System.getProperty("user.dir")+"\\src\\main\\resources\\ImageUpLoad\\grocery.png";
+ public static final String EXPECTED_SUCESSS_ALERT ="alert alert-success alert-dismissible";
+ 
  
  /**Manage category page**/
  public static final String IMAGEUPLOAD_MANAGE_CATEGORY =System.getProperty("user.dir")+"\\src\\main\\resources\\ImageUpLoad\\pastry.png";
@@ -35,4 +37,8 @@ public static final String EXPECTED_COLOR_ALERT_TEXT_INVALIDDATA="rgba(220, 53, 
  
  /**Mobile slide page**/
  public static final String IMAGEUPLOAD_MOBILE_SLIDER =System.getProperty("user.dir")+"\\src\\main\\resources\\ImageUpLoad\\bakeproduct.png";
+
+/**Manage delivery boy  page**/
+public static final String EXPECTED_TEXT_SEARCH ="Max08_11_2022_11_24_19";
+
 }
