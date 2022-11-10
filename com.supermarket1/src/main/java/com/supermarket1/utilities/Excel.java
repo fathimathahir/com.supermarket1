@@ -11,12 +11,11 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 public class Excel {
 	XSSFSheet sheet;
 	XSSFWorkbook workbook;
-	
+
 	XSSFRow row;
 	XSSFCell cell;
-  
-	public void setExcelFile(String WorkBookName,String Sheetname)
-	{
+
+	public void setExcelFile(String WorkBookName, String Sheetname) {
 		String path = System.getProperty("user.dir") + "\\src\\main\\resources\\ExcelFiles\\" + WorkBookName + ".xlsx";
 
 		try {
@@ -32,6 +31,7 @@ public class Excel {
 		}
 
 	}
+
 	public String getCellData(int rowNo, int columnNo) {
 		row = sheet.getRow(rowNo);
 		cell = row.getCell(columnNo);
@@ -53,13 +53,14 @@ public class Excel {
 		}
 
 	}
-	public Object[][] get_MultiDimensionalObjectArray(int row,int col) {
-		  Object data[][]=new Object[row][col];
-		  for(int i=0;i<row;i++) {
-		   for(int j=0;j<col;j++) {
-		    data[i][j]=getCellData(i,j);
-		    }
-		  }
-		  return data;
-		 }
+
+	public Object[][] get_MultiDimensionalObjectArray(int row, int col) {
+		Object data[][] = new Object[row][col];
+		for (int i = 0; i < row; i++) {
+			for (int j = 0; j < col; j++) {
+				data[i][j] = getCellData(i, j);
+			}
+		}
+		return data;
+	}
 }

@@ -3,7 +3,7 @@
 <suite name="crossbrowsertesting" thread-count="3" parallel="tests">
 
 	<test name="verify in chrome">
-     <parameter name="browser" value="chrome"></parameter>
+		<parameter name="browser" value="chrome"></parameter>
 		<classes>
 			<class name="com.supermarket.tests.LogInTest"></class>
 			<class name="com.supermarket.tests.PushNotificationTest"></class>
@@ -11,7 +11,7 @@
 		</classes>
 	</test>
 	<test name="verify in edge">
-     <parameter name="browser" value="edge"></parameter>
+		<parameter name="browser" value="edge"></parameter>
 		<classes>
 			<class name="com.supermarket.tests.LogInTest"></class>
 			<class name="com.supermarket.tests.PushNotificationTest"></class>
@@ -19,7 +19,7 @@
 		</classes>
 	</test>
 	<test name="verify in firefox">
-     <parameter name="browser" value="firefox"></parameter>
+		<parameter name="browser" value="firefox"></parameter>
 		<classes>
 			<class name="com.supermarket.tests.LogInTest"></class>
 			<class name="com.supermarket.tests.PushNotificationTest"></class>

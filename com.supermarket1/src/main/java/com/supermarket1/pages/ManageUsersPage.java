@@ -3,8 +3,6 @@ package com.supermarket1.pages;
 import java.util.ArrayList;
 import java.util.List;
 
-
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -21,9 +19,11 @@ public class ManageUsersPage {
 
 	@FindBy(xpath = "//li[@class='nav-item']//a[@href='https://groceryapp.uniqassosiates.com/admin/list-user']")
 	private WebElement manageUser;
-	@FindBy(xpath = "//a[@href='https://groceryapp.uniqassosiates.com/admin/users/status?id=257&st=inactive&page_ad=1']")
+	@FindBy(xpath = "//a[@href='https://groceryapp.uniqassosiates.com/admin/users/status?id=252&st=active&pagpage_ades=1']")
 	private WebElement unLockOption;
-
+	@FindBy(xpath = "//div[@class='alert alert-success alert-dismissible']")
+	private WebElement sucessStatusChangedAlert;
+	
 	public ManageUsersPage(WebDriver driver) {
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
@@ -52,10 +52,11 @@ public class ManageUsersPage {
 		WebElement deactivateButton = driver.findElement(By.xpath("//tbody//tr[" + j + "]//td[5]//a"));
 		deactivateButton.click();
 	}
-	public boolean unLock_Enabled()
-	{
+
+	
+	public String get_AttributeOfSucessAlert() {
 		GeneralUtility generalutility = new GeneralUtility(driver);
-		return generalutility.is_Enabled(unLockOption);
+		return generalutility.get_Attribute(sucessStatusChangedAlert, "class");
 	}
 
 }

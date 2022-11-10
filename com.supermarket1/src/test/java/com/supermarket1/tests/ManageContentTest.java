@@ -32,13 +32,12 @@ public class ManageContentTest extends Base {
 		managecontentPage.upLoad_Image(Constants.IMAGEUPLOAD_MANAGEPAGE);
 		managecontentPage.clickOn_SaveOption();
 		managecontentPage.get_BackGroundColorOfNewOption();
-		String expectedcolor=Constants.EXPECTED_COLOR_NEW_OPTION;
-		String actualcolor=managecontentPage.get_BackGroundColorOfNewOption();
+		String expectedcolor = Constants.EXPECTED_COLOR_NEW_OPTION;
+		String actualcolor = managecontentPage.get_BackGroundColorOfNewOption();
 		assertEquals(actualcolor, expectedcolor);
 	}
-		
 
-	@Test(groups = {"smoke","sanity"})
+	@Test(groups = { "smoke", "sanity" })
 	public void verify_UpDateOptionForManageFooterPage() {
 		loginPage = new LogInPage(driver);
 		loginPage.logIn();
@@ -49,8 +48,8 @@ public class ManageContentTest extends Base {
 		managecontentPage.clickOn_UpDateLink();
 		managecontentPage.clickOn_UpDateButton();
 		String expectedalert = Constants.EXPECTED_ATTRIBUTE_FOR_SUCESSRESETALERT;
-		String actualalert =managecontentPage.get_textForSucessUpdateAlert();
-		assertEquals( actualalert, expectedalert);
+		String actualalert = managecontentPage.get_textForSucessUpdateAlert();
+		assertEquals(actualalert, expectedalert);
 	}
 
 	@Test
@@ -62,10 +61,10 @@ public class ManageContentTest extends Base {
 		managecontentPage.clickOn_ManageContent();
 		managecontentPage.clickOn_ManageFooterPage();
 		managecontentPage.clickOn_UpDateLink();
-        managecontentPage.clickOn_ResetButton();
-	
-		String expectedcolor=Constants. EXPECTED_COLOR_RESET_OPTION;
-		String actualcolor=managecontentPage.get_BackGroundColorOfResetOption();
+		managecontentPage.clickOn_ResetButton();
+
+		String expectedcolor = Constants.EXPECTED_COLOR_RESET_OPTION;
+		String actualcolor = managecontentPage.get_BackGroundColorOfResetOption();
 		assertEquals(actualcolor, expectedcolor);
 	}
 
@@ -81,7 +80,6 @@ public class ManageContentTest extends Base {
 		managecontentPage.add_NewNews(data);
 		managecontentPage.clickOn_NewsSaveOption();
 		assertTrue(managecontentPage.saveButton_Enabled());
-		
+
 	}
 }
-		

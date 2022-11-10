@@ -14,13 +14,10 @@ import com.supermarket1.pages.ManageDeliverBoyPage;
 import com.supermarket1.utilities.Excel;
 import com.supermarket1.utilities.GeneralUtility;
 
-
 public class ManageDeliveryBoyTest extends Base {
 	LogInPage loginPage;
 	ManageDeliverBoyPage managedeliverboy;
 	Excel excel;
-	
-	
 
 	@Test
 	public void verify_ManageDeliveryBoy() {

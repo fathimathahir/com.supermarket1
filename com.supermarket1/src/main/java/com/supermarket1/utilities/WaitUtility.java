@@ -21,4 +21,9 @@ public class WaitUtility {
 	wait=new WebDriverWait(driver,Duration.ofSeconds(seconds));
 	wait.until(ExpectedConditions.elementToBeClickable(By.xpath(xpath)));
 	}
+	public void visiblity_OfElementLocated(long seconds,String xpath)
+	{
+	wait=new WebDriverWait(driver,Duration.ofSeconds(seconds));
+	wait.until(ExpectedConditions. visibilityOfElementLocated(By.xpath(xpath)));
+	}
 }

@@ -27,7 +27,7 @@ public class PdfReader {
 			PDDocument document = null;
 			document = PDDocument.load(file_input);
 			pdfData = new PDFTextStripper().getText(document);
-			// System.out.println(pdfData);
+			
 
 		} catch (Exception e) {
 			e.printStackTrace();

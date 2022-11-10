@@ -27,11 +27,9 @@ public class LogInPage {
 	private WebElement rememberMe;
 	@FindBy(xpath = "//label[@for='remember']")
 	private WebElement rememberMeLabel;
-	
+
 	@FindBy(xpath = "//i[@class='ace-icon fa fa-power-off']")
 	private WebElement logOut;
-	
-
 
 	public LogInPage(WebDriver driver) {
 		this.driver = driver;
@@ -79,11 +77,12 @@ public class LogInPage {
 
 	public String getTextOfAlert() {
 		GeneralUtility generalutility = new GeneralUtility(driver);
-		
+
 		String text = generalutility.get_Text(alertMessage);
 		System.out.println(text);
 		return text;
 	}
+
 	public String get_BackGroundColorForAlert() {
 		GeneralUtility generalutility = new GeneralUtility(driver);
 		return generalutility.get_CssValue(alertMessage, "background-color");
@@ -96,15 +95,15 @@ public class LogInPage {
 	}
 
 	public boolean is_SelectedRememberMe() {
-	
+
 		GeneralUtility generalutility = new GeneralUtility(driver);
 		return generalutility.is_Selected(rememberMe);
 
 	}
-	public void click_OnLogOut()
-	{
+
+	public void click_OnLogOut() {
 		profileImage.click();
-		 logOut.click();
+		logOut.click();
 	}
-	
+
 }

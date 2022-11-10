@@ -34,10 +34,10 @@ public class DashBoardPage {
 		return generalutility.get_CssValue(adminUser, "font-size");
 
 	}
-	public boolean check_IConIsDisplayed()
-	{
+
+	public boolean check_IConIsDisplayed() {
 		GeneralUtility generalutility = new GeneralUtility(driver);
-		return generalutility.is_Displayed( manageOfferCodeICon);
+		return generalutility.is_Displayed(manageOfferCodeICon);
 	}
 
 }

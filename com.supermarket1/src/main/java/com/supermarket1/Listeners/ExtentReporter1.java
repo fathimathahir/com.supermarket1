@@ -1,4 +1,5 @@
 package com.supermarket1.Listeners;
+
 import java.io.File;
 import java.util.Calendar;
 import java.util.Date;
@@ -18,8 +19,7 @@ import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;
 import com.supermarket1.constants.Constants;
 
-public class ExtentReporter1 implements IReporter
-{
+public class ExtentReporter1 implements IReporter {
 	private ExtentReports extent;
 
 	public void generateReport(List<XmlSuite> xmlSuites, List<ISuite> suites, String outputDirectory) {
@@ -70,6 +70,5 @@ public class ExtentReporter1 implements IReporter
 		calendar.setTimeInMillis(millis);
 		return calendar.getTime();
 	}
-	
 
 }

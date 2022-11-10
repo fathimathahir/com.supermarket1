@@ -3,14 +3,14 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.supermarket1.tests.PushNotificationTest">
+      <class name="com.supermarket1.tests.ManageUsersTest">
         <methods>
+          <include name="verify_ManageUserDeactivation"/>
           <include name="setUp"/>
           <include name="setUp"/>
           <include name="tearDown"/>
-          <include name="verify_PushNotification"/>
         </methods>
-      </class> <!-- com.supermarket1.tests.PushNotificationTest -->
+      </class> <!-- com.supermarket1.tests.ManageUsersTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

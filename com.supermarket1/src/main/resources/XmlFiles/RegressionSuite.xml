@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Regression build run"  thread-count="5" parallel="tests">
+	<listeners>
+	<listener class-name="com.supermarket1.Listeners.ExtentReporter1"></listener>
+	</listeners>
+	<test name="Run Module 1">
+	<classes>
+	<class name="com.supermarket1.tests.AdminusersTest"></class>
+	<class name="com.supermarket1.tests.DashBoardTest"></class>
+	<class name="com.supermarket1.tests.LogInTest"></class>
+	<class name="com.supermarket1.tests.ManageCategoryTest"></class>
+	<class name="com.supermarket1.tests.ManageContentTest"></class>
+	</classes>
+	</test>
+	<test name="Run Module 2">
+	<classes>
+	<class name="com.supermarket1.tests.ManageDeliveryBoyTest"></class>
+	<class name="com.supermarket1.tests.ManageExpenseTest"></class>
+	<class name="com.supermarket1.tests.ManageLocationTest"></class>
+	<class name="com.supermarket1.tests.ManageOfferCodeTest"></class>
+	<class name="com.supermarket1.tests.ManageOrderTest"></class>
+	</classes>
+	</test>
+	<test name="Run Module 3">
+	<classes>
+	<class name="com.supermarket1.tests.ManageSliderTest"></class>
+	<class name="com.supermarket1.tests.ManageUsersTest"></class>
+	<class name="com.supermarket1.tests.MobileSliderTest"></class>
+	<class name="com.supermarket1.tests.PushNotificationTest"></class>
+	
+	</classes>
+	</test>
+	</suite>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	

@@ -13,7 +13,7 @@ public class DashBoardTest extends Base {
 	LogInPage loginPage;
 	DashBoardPage dashBoardPage;
 
-	@Test
+	@Test(priority = 1)
 	public void verify_BackGroundColor() {
 		loginPage = new LogInPage(driver);
 		loginPage.logIn();
@@ -24,7 +24,7 @@ public class DashBoardTest extends Base {
 		assertEquals(expectedcolor, actualcolor);
 	}
 
-	@Test
+	@Test(priority = 3)
 	public void verify_FontSize() {
 		loginPage = new LogInPage(driver);
 		loginPage.logIn();
@@ -34,12 +34,13 @@ public class DashBoardTest extends Base {
 		String actualfontsize = dashBoardPage.get_FontSize();
 		assertEquals(expectedfontsize, actualfontsize);
 	}
-	@Test
+
+	@Test(priority = 2)
 	public void verify_IConIsDisplayedOrNot() {
 		loginPage = new LogInPage(driver);
 		loginPage.logIn();
 		dashBoardPage = new DashBoardPage(driver);
 		dashBoardPage.check_IConIsDisplayed();
 		assertTrue(dashBoardPage.check_IConIsDisplayed());
-}
+	}
 }

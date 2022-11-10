@@ -56,7 +56,7 @@ public class ManageCategoryTest extends Base {
 		assertTrue(managecategorypage.saveButton_Enabled());
 }
 	@Test
-	public void verify_UpDateSubCategoryInformation() {
+	public void verify_UpDationOfSubCategoryInformation() {
 		loginPage = new LogInPage(driver);
 		loginPage.logIn();
 		managecategorypage = new ManageCategoryPage(driver);
@@ -69,7 +69,7 @@ public class ManageCategoryTest extends Base {
 		
 	}
 	@Test
-	public void verify_DeleteSubCategoryInformation() {
+	public void verify_DeleteFunctinalitySubCategoryInformation() {
 		loginPage = new LogInPage(driver);
 		loginPage.logIn();
 		managecategorypage = new ManageCategoryPage(driver);

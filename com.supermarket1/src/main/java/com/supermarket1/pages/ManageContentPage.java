@@ -86,7 +86,7 @@ public class ManageContentPage {
 
 	public void clickOn_SaveOption() {
 		WaitUtility waitutility = new WaitUtility(driver);
-		waitutility.element_ToBeClickable(10, "//button[text()='Save']");
+		waitutility.element_ToBeClickable(10L, "//button[text()='Save']");
 		saveOption.click();
 	}
 
@@ -102,16 +102,15 @@ public class ManageContentPage {
 		UpDateButton.click();
 	}
 
-
 	public String get_textForSucessUpdateAlert() {
 		GeneralUtility generalutility = new GeneralUtility(driver);
 		return generalutility.get_Attribute(UpDatesucessmessage, "class");
 
 	}
+
 	public void clickOn_ResetButton() {
 		ResetOption.click();
 	}
-	
 
 	public void clickOn_ManageNewsPage() {
 		ManageNewsLink.click();
@@ -120,6 +119,7 @@ public class ManageContentPage {
 	public void clickOn_NewNewsOption() {
 		NewOption.click();
 	}
+
 	public void add_NewNews(String data) {
 		NewsTitle.sendKeys(data);
 	}
@@ -132,11 +132,13 @@ public class ManageContentPage {
 		GeneralUtility generalutility = new GeneralUtility(driver);
 		return generalutility.is_Enabled(NewsSaveOption);
 	}
+
 	public String get_BackGroundColorOfNewOption() {
 		GeneralUtility generalutility = new GeneralUtility(driver);
 		return generalutility.get_CssValue(newoption, "background-color");
 
 	}
+
 	public String get_BackGroundColorOfResetOption() {
 		GeneralUtility generalutility = new GeneralUtility(driver);
 		return generalutility.get_CssValue(ResetOption, "background-color");

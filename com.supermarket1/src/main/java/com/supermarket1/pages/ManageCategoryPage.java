@@ -46,7 +46,7 @@ public class ManageCategoryPage {
 	private WebElement UpDateSucessfully;
 	@FindBy(xpath = "//a[@href='https://groceryapp.uniqassosiates.com/admin/Subcategory/delete?del=108&page_ad=1']")
 	private WebElement delete;
-	
+
 	public ManageCategoryPage(WebDriver driver) {
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
@@ -112,38 +112,45 @@ public class ManageCategoryPage {
 		GeneralUtility generalutility = new GeneralUtility(driver);
 		return generalutility.is_Enabled(searchButton);
 	}
+
 	public void click_SubCategory() {
-		 subCategory.click();
+		subCategory.click();
 
 	}
+
 	public void select_Category() {
 		PageUtility pageUtility = new PageUtility(driver);
 		pageUtility.select_ByValue("3", selectCategory);
-    
-		 
+
 	}
+
 	public void enter_SubCategory(String subcategory) {
 		entersubCategory.sendKeys(subcategory);
 
 	}
+
 	public void click_EditOption() {
 		editOption.click();
 
 	}
+
 	public void click_UpDateButton() {
 		UpDateButton.click();
 
 	}
+
 	public boolean sucessfullyUpDatedAlertIcon_Displayed() {
 		GeneralUtility generalutility = new GeneralUtility(driver);
 		return generalutility.is_Displayed(UpDateSucessfully);
 	}
+
 	public void click_DeleteButton() {
 		delete.click();
-		 String alert = driver.switchTo().alert().getText();
-			driver.switchTo().alert().accept();
+		String alert = driver.switchTo().alert().getText();
+		driver.switchTo().alert().accept();
 
 	}
+
 	public boolean deleteButton_Enabled() {
 		GeneralUtility generalutility = new GeneralUtility(driver);
 		return generalutility.is_Enabled(delete);

@@ -35,7 +35,6 @@ public class LogInTest extends Base {
 		assertEquals(actualcolor, expectedcolor);
 
 	}
-		
 
 	@Test(groups = "sanity")
 	public void Verify_RememberMeCheckBox() {

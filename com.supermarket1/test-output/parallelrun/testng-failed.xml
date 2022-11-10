@@ -8,12 +8,24 @@
     <classes>
       <class name="com.supermarket1.tests.LogInTest">
         <methods>
-          <include name="verify_InvalidData"/>
           <include name="setUp"/>
           <include name="setUp"/>
           <include name="tearDown"/>
+          <include name="verify_LogOut"/>
         </methods>
       </class> <!-- com.supermarket1.tests.LogInTest -->
     </classes>
   </test> <!-- smoke(failed) -->
+  <test thread-count="3" parallel="tests" name="regression(failed)">
+    <classes>
+      <class name="com.supermarket1.tests.ManageDeliveryBoyTest">
+        <methods>
+          <include name="verify_SearchNameManageDeliveryBoy"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.supermarket1.tests.ManageDeliveryBoyTest -->
+    </classes>
+  </test> <!-- regression(failed) -->
 </suite> <!-- Failed suite [parallelrun] -->
